@@ -22,6 +22,11 @@ public class StringProcessor
 			String line = reader.readLine();
 			while(line != null)
 			{
+				if(line.length()<=0)
+				{
+					line = reader.readLine();
+					continue;
+				}
 				if(annotation.trimWhiteSpace())
 				{
 					line = line.trim();
